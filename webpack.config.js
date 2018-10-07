@@ -5,9 +5,7 @@ module.exports = {
         path: __dirname,
         filename: 'dist/bundle.js'
     },
-    resolve: {
-        extensions: ['.jsx', '.js']
-    },
+    resolve: { extensions: ['.jsx', '.js']},
     module: {
         rules: [
             {
@@ -15,9 +13,9 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/,
                 query: {
-                    "presets": [
-                        "@babel/preset-react",
-                    ],
+                    presets: [
+                        '@babel/preset-react'
+                    ]
                 }
             }
         ]

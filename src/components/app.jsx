@@ -1,17 +1,23 @@
-import React, { Component } from 'react'
-import { IntroComponent } from './intro'
+import React, { Component } from 'react';
+import {
+    HashRouter as Router,
+    Route
+} from 'react-router-dom';
+
+import { IntroComponent } from './intro';
+import { FormComponent } from './form'
 
 export class AppComponent extends Component {
 
     render() {
         return (
 
-            <div>
-                <h1>
-                    App
-                </h1>
-                <IntroComponent />
-            </div>
+            <Router>
+                <div>
+                    <Route exact path="/" component={IntroComponent} />
+                    <Route exact path="/user/:id" component={FormComponent} />
+                </div>
+            </Router>
         )
     }
 }
